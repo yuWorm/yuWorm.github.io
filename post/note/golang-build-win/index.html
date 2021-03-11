@@ -7,25 +7,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Categories - YuWorm&#39;s Blog</title>
-    <meta property="og:title" content="Categories - YuWorm&#39;s Blog">
+    <title>Golang在Windows上的交叉编译 - YuWorm&#39;s Blog</title>
+    <meta property="og:title" content="Golang在Windows上的交叉编译 - YuWorm&#39;s Blog">
     <meta property="og:type" content="article">
         
+    <meta property="article:published_time" content="2021-03-11T19:32:07&#43;08:00">
         
-    <meta name="description" content="Categories">
+        
+    <meta property="article:modified_time" content="2021-03-11T19:32:07&#43;08:00">
+        
+    <meta name="description" content="Golang在Windows上的交叉编译">
         
     <meta name="author" content="yuWorm">
-    <meta property="og:url" content="https://yuworm.github.io/categories/">
+    <meta property="og:url" content="https://yuworm.github.io/post/note/golang-build-win/">
 
-    <link rel="alternate" type="application/rss&#43;xml" href="https://yuworm.github.io/categories/index.xml" title="YuWorm&#39;s Blog">
     <link rel="stylesheet" href="/css/normalize.css">
+    
+    <link rel="stylesheet" href="/css/syntax.css">
     
     <link rel="stylesheet" href="/css/style.css">
 
     
     <link rel="stylesheet" href="/css/style.extra.css">
     </head>
-
 
 <body>
 <header id="header" class="clearfix">
@@ -41,7 +45,7 @@
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
-                    <a  href="https://yuworm.github.io/">博客</a>
+                    <a class="current" href="https://yuworm.github.io/">博客</a>
                     
                     <a  href="https://yuworm.github.io/archives/" title="存档">
                         存档
@@ -64,29 +68,85 @@
 
             <div class="col-8" id="main">
                 <div class="res-cons">
-                    
-                    <h1>共有1个分类</h1>
-                    
+                    <article class="post">
+                        <header>
+                            <h1 class="post-title">Golang在Windows上的交叉编译</h1>
+                        </header>
+                        <date class="post-meta meta-date">
+                            2021年3月11日
+                            19:32
+                        </date>
+                        
+                        <div class="post-meta meta-category">
+                            ，归类于
+                            
+                                <a href="/categories/%E7%AC%94%E8%AE%B0">笔记</a>
+                            
+                        </div>
+                        <div class="post-content">
+                            <p>golang的编译功能非常好用，可以在任何平台编译出所有任何平台的程序，下面为在windows上编译其他平台，cpu的可运行程序。</p>
+<p>下面命令适用于cmd</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">set</span> <span class="nv">GOARCH</span><span class="o">=</span>amd64 <span class="c1">#设置生成的程序适用于的cpu型号，常用的有amd64，386，arm64，arm</span>
+<span class="nb">set</span> <span class="nv">GOOS</span><span class="o">=</span>linux <span class="c1">#设置生成的程序适用于的系统</span>
+go build hello.go
 
-                    
-                    <h2><a href="/categories/%E7%AC%94%E8%AE%B0">笔记</a> (2)</h2>
-                    <ul>
-                        
-                        <li>
-                            <date class="meta-date">2021/03/11</date>
-                            <a class="archive-title" href="https://yuworm.github.io/post/note/golang-build-win/">Golang在Windows上的交叉编译</a>
-                        </li>
-                        
-                        <li>
-                            <date class="meta-date">2021/03/09</date>
-                            <a class="archive-title" href="https://yuworm.github.io/post/note/win-mysql-install/">记录一次Windows手动安装MySQL8.0</a>
-                        </li>
-                        
-                    </ul>
-                    
+<span class="c1">##linux可以使用如下命令</span>
+<span class="nv">GOARCH</span><span class="o">=</span>amd64 <span class="nv">GOOS</span><span class="o">=</span>linux go build hello.go
+</code></pre></td></tr></table>
+</div>
+</div><p>如上即可</p>
+
+                        </div>
+
+                        <div class="post-meta meta-tags">
+                            
+                            <ul class="clearfix">
+                                
+                                <li><a href="/tags/golang">golang</a></li>
+                                
+                                <li><a href="/tags/go%E5%AD%A6%E4%B9%A0">Go学习</a></li>
+                                
+                                <li><a href="/tags/%E7%AC%94%E8%AE%B0">笔记</a></li>
+                                
+                                <li><a href="/tags/windows">windows</a></li>
+                                
+                            </ul>
+                            
+                        </div>
+                    </article>
+                    <div id="post-donation">
+  <button id="post-donation-button" title="点击隐藏/显示打赏信息">
+    Donate / 打赏
+  </button>
+  <div id="post-donation-qrcodes"><div class="post-donation-qrcode alipay">
+      <img src="https://yuworm.github.io/img/thanks.jpg">
+      <p>Via Alipay / 支付宝</p>
+    </div><div class="post-donation-qrcode wechat">
+      <img src="https://yuworm.github.io/img/thanks.jpg">
+      <p>Via Wechat / 微信赞赏</p>
+    </div></div>
+</div>
+                    <div id="comments"><span class="widget-title">评论</span>
+  <script src="https://utteranc.es/client.js"
+          repo="JokerQyou/comments"
+          issue-term="url"
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+  </script></div>
+
                 </div>
             </div>
-
             <div id="secondary">
     <section class="widget">
         
@@ -197,7 +257,6 @@
 
 <script type="text/javascript" src="/js/app.extra.js" defer></script>
 <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' defer></script>
-
 
 
 </body>

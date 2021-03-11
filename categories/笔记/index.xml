@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on YuWorm&#39;s Blog</title>
-    <link>https://yuworm.github.io/post/</link>
-    <description>Recent content in Posts on YuWorm&#39;s Blog</description>
+    <title>笔记 on YuWorm&#39;s Blog</title>
+    <link>https://yuworm.github.io/categories/%E7%AC%94%E8%AE%B0/</link>
+    <description>Recent content in 笔记 on YuWorm&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 11 Mar 2021 19:32:07 +0800</lastBuildDate><atom:link href="https://yuworm.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 11 Mar 2021 19:32:07 +0800</lastBuildDate><atom:link href="https://yuworm.github.io/categories/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Golang在Windows上的交叉编译</title>
       <link>https://yuworm.github.io/post/note/golang-build-win/</link>
@@ -23,15 +23,6 @@
       
       <guid>https://yuworm.github.io/post/note/win-mysql-install/</guid>
       <description>下载MySQL 我这里下的是8.0，可以去官网下在MySql压缩包。 创建配置文件 下载后，手动解压到自己找得到目录，然后在解压目录中创建my.i</description>
-    </item>
-    
-    <item>
-      <title>HelloHugo</title>
-      <link>https://yuworm.github.io/post/hellohugo/</link>
-      <pubDate>Mon, 08 Mar 2021 20:49:41 +0800</pubDate>
-      
-      <guid>https://yuworm.github.io/post/hellohugo/</guid>
-      <description>Hello Hugo！ 第一次使用Hugo，记录一下hugo的安装过程（环境为Windows）。 首先去Hugo Releases上下载hugo的程序，下载</description>
     </item>
     
   </channel>

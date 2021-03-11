@@ -2,23 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://yuworm.github.io/categories/</loc>
+    <lastmod>2021-03-11T19:32:07+08:00</lastmod>
+  </url><url>
+    <loc>https://yuworm.github.io/tags/golang/</loc>
+    <lastmod>2021-03-11T19:32:07+08:00</lastmod>
+  </url><url>
+    <loc>https://yuworm.github.io/post/note/golang-build-win/</loc>
+    <lastmod>2021-03-11T19:32:07+08:00</lastmod>
+  </url><url>
+    <loc>https://yuworm.github.io/tags/go%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2021-03-11T19:32:07+08:00</lastmod>
+  </url><url>
+    <loc>https://yuworm.github.io/post/</loc>
+    <lastmod>2021-03-11T19:32:07+08:00</lastmod>
+  </url><url>
+    <loc>https://yuworm.github.io/tags/</loc>
+    <lastmod>2021-03-11T19:32:07+08:00</lastmod>
+  </url><url>
+    <loc>https://yuworm.github.io/tags/windows/</loc>
+    <lastmod>2021-03-11T19:32:07+08:00</lastmod>
+  </url><url>
+    <loc>https://yuworm.github.io/</loc>
+    <lastmod>2021-03-11T19:32:07+08:00</lastmod>
+  </url><url>
+    <loc>https://yuworm.github.io/tags/%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2021-03-11T19:32:07+08:00</lastmod>
+  </url><url>
+    <loc>https://yuworm.github.io/categories/%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2021-03-11T19:32:07+08:00</lastmod>
+  </url><url>
+    <loc>https://yuworm.github.io/tags/mysql/</loc>
+    <lastmod>2021-03-09T20:15:05+08:00</lastmod>
+  </url><url>
+    <loc>https://yuworm.github.io/post/note/win-mysql-install/</loc>
+    <lastmod>2021-03-09T20:15:05+08:00</lastmod>
+  </url><url>
     <loc>https://yuworm.github.io/about/</loc>
     <lastmod>2021-03-08T21:56:52+08:00</lastmod>
   </url><url>
     <loc>https://yuworm.github.io/archives/</loc>
     <lastmod>2021-03-08T21:28:46+08:00</lastmod>
   </url><url>
-    <loc>https://yuworm.github.io/2021/03/hellohugo/</loc>
+    <loc>https://yuworm.github.io/post/hellohugo/</loc>
     <lastmod>2021-03-08T20:49:41+08:00</lastmod>
-  </url><url>
-    <loc>https://yuworm.github.io/post/</loc>
-    <lastmod>2021-03-08T20:49:41+08:00</lastmod>
-  </url><url>
-    <loc>https://yuworm.github.io/</loc>
-    <lastmod>2021-03-08T20:49:41+08:00</lastmod>
-  </url><url>
-    <loc>https://yuworm.github.io/categories/</loc>
-  </url><url>
-    <loc>https://yuworm.github.io/tags/</loc>
   </url>
 </urlset>

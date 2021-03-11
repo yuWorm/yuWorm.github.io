@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="generator" content="Hugo 0.81.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>HelloHugo - YuWorm&#39;s Blog</title>
+    <meta property="og:title" content="HelloHugo - YuWorm&#39;s Blog">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content="2021-03-08T20:49:41&#43;08:00">
+        
+        
+    <meta property="article:modified_time" content="2021-03-08T20:49:41&#43;08:00">
+        
+    <meta name="description" content="HelloHugo">
+        
+    <meta name="author" content="yuWorm">
+    <meta property="og:url" content="https://yuworm.github.io/post/hellohugo/">
+
+    <link rel="stylesheet" href="/css/normalize.css">
+    
+    <link rel="stylesheet" href="/css/syntax.css">
+    
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+    <link rel="stylesheet" href="/css/style.extra.css">
+    </head>
+
+<body>
+<header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="https://yuworm.github.io/">
+                        YuWorm&#39;s Blog
+                    </a>
+                
+                <p class="description">记录折腾的那点事</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="https://yuworm.github.io/">博客</a>
+                    
+                    <a  href="https://yuworm.github.io/archives/" title="存档">
+                        存档
+                    </a>
+                    
+                    <a  href="https://yuworm.github.io/about/" title="关于">
+                        关于
+                    </a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div id="body">
+    <div class="container">
+        <div class="col-group">
+
+            <div class="col-8" id="main">
+                <div class="res-cons">
+                    <article class="post">
+                        <header>
+                            <h1 class="post-title">HelloHugo</h1>
+                        </header>
+                        <date class="post-meta meta-date">
+                            2021年3月8日
+                            20:49
+                        </date>
+                        <aside id="toc" class="dismissed">
+                            <span class="toc-title">目录 <a href="#" class="toc-dismiss"></a></span>
+                            <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#hello-hugo">Hello Hugo！</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                        </aside><div class="post-content">
+                            <h3 id="hello-hugo">Hello Hugo！</h3>
+<p>第一次使用Hugo，记录一下hugo的安装过程（环境为Windows）。</p>
+<p>首先去<a href="https://github.com/gohugoio/hugo/releases">Hugo Releases</a>上下载hugo的程序，下载过来解压，把解压目录添加到环境变量，这样就可以直接在cmd中直接使用hugo命令了。</p>
+<p>之后执行<code>hugo new site BlogName</code>创建站点，创建完成后，BlogName目录下就会出现hugo的程序结构，如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">E:.
+├─archetypes <span class="c1">#文章类型目录</span>
+├─content <span class="c1">#文章存放目录</span>
+├─data <span class="c1">#数据目录</span>
+├─layouts <span class="c1">#模板目录，优先级大于theme/layout</span>
+├─static <span class="c1">#静态文件目录</span>
+└─themes <span class="c1">#主题文件目录</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>hugo创建好程序目录后，是没有默认主题的，得自己安装主题才能使用。</p>
+<p>所以先安装一个主题，我这里安装的是maupassant，安装方式如下：</p>
+<p><code>git clone https://github.com/JokerQyou/maupassant-hugo.git theme/maupassant</code></p>
+<p>git将代码克隆到theme目录，然后修改根目录的config.toml文件，在里面添加一行<code>theme=&quot;maupassant&quot;</code>来指定主题。</p>
+<p>maupassant还有一些主题相关的属性，完整的配置文件如下，以我的为例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="err">baseURL</span> <span class="err">=</span> <span class="s2">&#34;https://yuworm.github.io/&#34;</span>
+<span class="err">languageCode</span> <span class="err">=</span> <span class="s2">&#34;zh-CN&#34;</span>
+<span class="err">title</span> <span class="err">=</span> <span class="s2">&#34;YuWorm&#39;s Blog&#34;</span>
+<span class="err">hasCJKLanguage</span> <span class="err">=</span> <span class="kc">true</span>
+<span class="err">theme</span> <span class="err">=</span> <span class="s2">&#34;maupassant&#34;</span>
+<span class="err">enableRobotsTXT</span> <span class="err">=</span> <span class="kc">true</span>
+<span class="err">PaginatePath</span> <span class="err">=</span> <span class="s2">&#34;page&#34;</span>
+
+<span class="p">[</span><span class="err">author</span><span class="p">]</span>
+    <span class="err">name</span> <span class="err">=</span> <span class="s2">&#34;yuWorm&#34;</span>
+    <span class="err">homepage</span> <span class="err">=</span> <span class="s2">&#34;http://yuworms.gitee.io/&#34;</span>
+
+<span class="p">[</span><span class="err">params</span><span class="p">]</span>
+    <span class="err">subtitle</span> <span class="err">=</span> <span class="s2">&#34;记录折腾的那点事&#34;</span>
+    <span class="err">description</span> <span class="err">=</span> <span class="s2">&#34;A nook preserved in Cyberspace where I can be myself.&#34;</span>
+    <span class="err">keywords</span> <span class="err">=</span> <span class="s2">&#34;YuWorm,博客,Web,软件,Python,Android,Linux,Golang&#34;</span>
+
+    <span class="err">customCSS</span> <span class="err">=</span> <span class="p">[</span><span class="s2">&#34;style.extra.css&#34;</span><span class="p">]</span>
+    <span class="err">customJS</span> <span class="err">=</span> <span class="p">[</span><span class="s2">&#34;app.extra.js&#34;</span><span class="p">]</span>
+
+<span class="p">[</span><span class="err">params.utteranc</span><span class="p">]</span>
+    <span class="err">repo</span> <span class="err">=</span> <span class="s2">&#34;JokerQyou/comments&#34;</span>
+    <span class="err">issueTerm</span> <span class="err">=</span> <span class="s2">&#34;url&#34;</span>
+    <span class="err">theme</span> <span class="err">=</span> <span class="s2">&#34;github-light&#34;</span>
+
+<span class="p">[</span><span class="err">params.donation.qrcodes</span><span class="p">]</span>
+    <span class="err">alipay</span> <span class="err">=</span> <span class="s2">&#34;alipay_qrcode.png&#34;</span>
+    <span class="err">wechat</span> <span class="err">=</span> <span class="s2">&#34;wechat_donation_qrcode.png&#34;</span>
+
+<span class="p">[[</span><span class="err">params.links</span><span class="p">]]</span>
+    <span class="err">name</span> <span class="err">=</span> <span class="s2">&#34;比尔盖子 博客&#34;</span>
+    <span class="err">url</span> <span class="err">=</span> <span class="s2">&#34;https://tomli.blog/&#34;</span>
+    <span class="err">title</span> <span class="err">=</span> <span class="s2">&#34;代码如诗，人生无限。&#34;</span>
+
+<span class="p">[</span><span class="err">taxonomies</span><span class="p">]</span>
+  <span class="err">tag</span> <span class="err">=</span> <span class="s2">&#34;tags&#34;</span>
+  <span class="err">category</span> <span class="err">=</span> <span class="s2">&#34;categories&#34;</span>
+  
+<span class="p">[[</span><span class="err">menu.main</span><span class="p">]]</span>
+    <span class="err">identifier</span> <span class="err">=</span> <span class="s2">&#34;archives&#34;</span>
+    <span class="err">name</span> <span class="err">=</span> <span class="s2">&#34;存档&#34;</span>
+    <span class="err">url</span> <span class="err">=</span> <span class="s2">&#34;/archives/&#34;</span>
+    <span class="err">weight</span> <span class="err">=</span> <span class="mi">3</span>
+
+<span class="p">[[</span><span class="err">menu.main</span><span class="p">]]</span>
+    <span class="err">identifier</span> <span class="err">=</span> <span class="s2">&#34;about&#34;</span>
+    <span class="err">name</span> <span class="err">=</span> <span class="s2">&#34;关于&#34;</span>
+    <span class="err">url</span> <span class="err">=</span> <span class="s2">&#34;/about/&#34;</span>
+    <span class="err">weight</span> <span class="err">=</span> <span class="mi">4</span>
+
+<span class="p">[</span><span class="err">markup</span><span class="p">]</span>
+    <span class="p">[</span><span class="err">markup.highlight</span><span class="p">]</span>
+        <span class="err">codeFences</span> <span class="err">=</span> <span class="kc">true</span>
+        <span class="err">noClasses</span> <span class="err">=</span> <span class="kc">false</span>
+        <span class="err">tabWidth</span> <span class="err">=</span> <span class="mi">4</span>
+        <span class="err">lineNos</span> <span class="err">=</span> <span class="kc">true</span>
+    <span class="p">[</span><span class="err">markup.tableOfContents</span><span class="p">]</span>
+        <span class="err">ordered</span> <span class="err">=</span> <span class="kc">false</span>
+        <span class="err">startLevel</span> <span class="err">=</span> <span class="mi">1</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>配置好后，就可以使用<code>hugo new post/HelloHugo.md</code>创建文章了。</p>
+<p>之后就可以在根目录执行<code>hugo server -D</code>即可启动本地服务，-D参数可以将草稿文章，及文章属性<code>draft:true</code>的文章。</p>
+<p>访问 http://localhost:1313/即可本地访问你的博客了。</p>
+<p>测试完毕，就可以在博客根目录使用<code>hugo</code>命令生成静态页面，静态页面输出在博客目录下的public目录中，然后进入public目录，使用git命令将其上传到github page或者gitte page都行。</p>
+<p>具体命令如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">cd</span> public
+git clone https://github.com/yuWorm/yuWorm.github.io.git
+git status
+git add .
+git commit -m <span class="s2">&#34;更新博客&#34;</span>
+git push -u orgin master
+</code></pre></td></tr></table>
+</div>
+</div><p>之后就可以直接用你的github page链接访问你的博客了。</p>
+
+                        </div>
+
+                        <div class="post-meta meta-tags">
+                            
+                            没有标签
+                            
+                        </div>
+                    </article>
+                    <div id="post-donation">
+  <button id="post-donation-button" title="点击隐藏/显示打赏信息">
+    Donate / 打赏
+  </button>
+  <div id="post-donation-qrcodes"><div class="post-donation-qrcode alipay">
+      <img src="https://yuworm.github.io/img/thanks.jpg">
+      <p>Via Alipay / 支付宝</p>
+    </div><div class="post-donation-qrcode wechat">
+      <img src="https://yuworm.github.io/img/thanks.jpg">
+      <p>Via Wechat / 微信赞赏</p>
+    </div></div>
+</div>
+                    <div id="comments"><span class="widget-title">评论</span>
+  <script src="https://utteranc.es/client.js"
+          repo="JokerQyou/comments"
+          issue-term="url"
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+  </script></div>
+
+                </div>
+            </div>
+            <div id="secondary">
+    <section class="widget">
+        
+    
+<form id="search" method="POST" action="https://duckduckgo.com/">
+    
+    <input type="text" name="q" maxlength="255" placeholder="搜索...">
+    
+    <input type="hidden" name="sites" value="https://yuworm.github.io/">
+    
+    <input type="hidden" name="kp" value="-2">
+    
+    <input type="hidden" name="kh" value="1">
+    
+    <input type="hidden" name="kl" value="wt-wt">
+    
+    <input type="hidden" name="kg" value="p">
+    
+    <input type="hidden" name="kaf" value="1">
+    
+    
+    <input type="hidden" name="k1" value="-1">
+
+    
+
+    
+    
+    <input type="hidden" name="k7" value="#ffffff">
+    
+    <input type="hidden" name="kj" value="#ffffff">
+    
+    <input type="hidden" name="ky" value="#eaeaea">
+    
+    <input type="hidden" name="kx" value="#6E7173">
+    
+    <input type="hidden" name="k8" value="#444">
+    
+    <input type="hidden" name="k9" value="#6E7173">
+    
+    <input type="hidden" name="kaa" value="#6E7173">
+    
+    <input type="hidden" name="kae" value="#6E7173">
+
+    
+    
+    <input type="hidden" name="ko" value="1">
+    
+    <input type="hidden" name="kt" value="n">
+    
+    <input type="hidden" name="ka" value="g">
+    
+    <input type="hidden" name="ks" value="l">
+    
+    <input type="hidden" name="kv" value="1">
+
+    <button type="submit" class="submit icon-search"></button>
+</form>
+
+
+
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+        <ul class="widget-list">
+            
+            <li>
+                <a href="/categories/%E7%AC%94%E8%AE%B0">
+                    笔记 (2)
+                </a>
+            </li>
+            
+        </ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-title">友情链接</h3>
+        <ul class="widget-list">
+            
+            <li>
+                <a rel="noreferrer noopener nofollow" href="https://tomli.blog/" title="代码如诗，人生无限。">比尔盖子 博客</a>
+            </li>
+            
+        </ul>
+    </section>
+    
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+        </div>
+    </div>
+</div>
+<footer id="footer">
+    <div class="container">
+      &copy; 2021 <a rel="nofollow" href="https://yuworm.github.io/">YuWorm&#39;s Blog</a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io">Hugo</a> &amp; <a rel="nofollow noreferer noopener" href="https://github.com/JokerQyou/maupassant-hugo">maupassant theme</a>.
+    </div>
+</footer>
+
+<script type="text/javascript" src="/js/app.js" defer></script>
+
+
+<script type="text/javascript" src="/js/app.extra.js" defer></script>
+<script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' defer></script>
+
+
+</body>
+</html>
